@@ -63,11 +63,13 @@ frontend/                    # (구현됨, api/는 백엔드 연동 때 추가)
 ├── public/favicon.svg
 └── src/
     ├── main.tsx             # 진입점 (StrictMode)
-    ├── App.tsx              # todos 상태, 추가·토글·수정·삭제, 화면 구성
-    ├── types.ts             # Todo { id, text, completed }
+    ├── App.tsx              # todos·statusFilter 상태, 추가·토글·수정·삭제, 2열 대시보드 구성
+    ├── types.ts             # Todo { id, text, completed, priority }
+    ├── priorities.ts        # 우선순위 (높음·보통·낮음, 기본 보통)
+    ├── statuses.ts          # 완료 상태 필터 (전체·진행 중·완료), 개수 계산
     ├── todoText.ts          # 텍스트 검증 (trim 후 1~100자, 서버와 같은 문구)
     ├── index.css            # 디자인 토큰 + 전체 스타일
-    ├── components/          # TodoInput(입력 폼), TodoItem(작업 카드·인라인 편집)
+    ├── components/          # TodoInput, TodoItem, ProgressRing, StatCard, StatusFilter, PriorityBadge, EmptyState
     └── api/                 # (예정) 백엔드 API 호출
 
 backend/
