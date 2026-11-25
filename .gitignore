@@ -1,0 +1,21 @@
+# OMC 로컬 도구 상태
+.omc/
+
+# 환경 변수 (비밀 값 포함, 커밋 금지)
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# 강의 자료 (저장소에 포함하지 않음)
+lession/
+
+# Node / Vite
+node_modules/
+dist/
+*.tsbuildinfo
